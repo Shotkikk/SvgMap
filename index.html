@@ -1,0 +1,47 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8">
+    <title> Klikalna mapa </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:500" rel="stylesheet">
+</head>
+
+<script src="node_modules/snapsvg/dist/snap.svg-min.js"></script>
+
+    <style>
+        svg {
+            max-width:565px;
+            max-height:533px;
+            text-transform: uppercase;
+        }
+        svg text {
+            cursor:default;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+
+<body>
+
+    <div class="map-cnt">
+        <svg id="svg"></svg>
+    </div>
+
+    <script>
+        var svg = Snap('#svg');
+        var activeElement = null;
+        var map = [];
+
+        svg.attr({ viewBox: "0 0 565 533" });
+    </script>
+    <script src="maps/wojewodztwa.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
