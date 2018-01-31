@@ -104,7 +104,6 @@ for (var key in map) {
         });
 
         var pathName = this[0].data('name');
-        $('.map-cnt').append('<span class="loading">Wczytuje dane</span>');
 
         $.ajax({
             url : 'skrypt-mapy.php',
@@ -123,6 +122,8 @@ for (var key in map) {
             complete : function() {
                 $('.map-cnt .loading').remove();
             }
-        })
+        });
+
+        $('#stateName').attr('value', pathName);
     })
 }
